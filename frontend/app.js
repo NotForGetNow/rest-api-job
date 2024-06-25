@@ -10,7 +10,7 @@ document.getElementById('dataForm').addEventListener('submit', async function (e
         const newItem = { name, position }
         try {
             const response = await fetch(API_URL, {
-                method: 'POST',
+                method: 'POST', 
                 headers: {
                     'Content-Type': 'application/json'
                 },
