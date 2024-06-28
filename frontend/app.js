@@ -8,7 +8,7 @@ document.getElementById('dataForm').addEventListener('submit', async function (e
 
     if (name && position) {
         const newItem = { name, position }
-        try {
+        try { 
             const response = await fetch(API_URL, {
                 method: 'POST',  
                 headers: {
