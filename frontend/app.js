@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:4000/api/items'
+const API_URL = 'https://rest-api-jobbbb.onrender.com'
 
 document.getElementById('dataForm').addEventListener('submit', async function (event) {
     event.preventDefault()
