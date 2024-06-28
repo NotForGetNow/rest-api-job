@@ -2,12 +2,16 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
+require('dotenv').config()
+
 const app = express(); 
 
 let data = [];
 
 app.use(cors());
 app.use(express.json());
+
+const port = process.env.PORT || 4000
 
 app.use(express.static(path.join(__dirname, '../frontend')));
 
@@ -51,6 +55,6 @@ app.put('/api/items/:index', (req, res) => {
 });
 
 
-app.listen(4000, () => {
+app.listen(port, () => {
     console.log('Сервер запущен на сервере http://localhost:4000');
 });
